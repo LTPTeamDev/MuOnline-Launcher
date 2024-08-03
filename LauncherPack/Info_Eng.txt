@@ -1,0 +1,13 @@
+﻿1). Creating a MiniUpd:
+	To create a mini update, move all the files / folders we need to update to the "Configs & Etc \ Parsers \ MiniUpd \" folder in the client, and start
+	application "Parcer_MiniUpd.exe" and click on the "Start" button, it will generate the file "update.info". Next, take this file, and files
+	updates and transfer it to the Web host. Everything, the process of creating the update list is completed.
+2). Configuring the launcher:
+	Goes to the "Configs & Etc \ ConfigCreator \" folder and launches the "ConfigCreator.exe" application.
+	Here I think everything is clear and without explanation, but I'll explain everything just in case.
+	RSS Link is the path to your RSS feed.
+	Server IP - the IP address where your server is installed. (For statistics online \ offline)
+	GS Port - GameServer-a port. (For statistics online \ offline)
+	CS Port - ConnectServer port. (For statistics online \ offline)
+	Start File - The name of the file that the launcher will launch. By default, "Main.exe"
+	Time Zone.

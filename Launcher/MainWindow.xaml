@@ -1,0 +1,124 @@
+﻿<Window x:Class="Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Launcher" 
+        Height="583"
+        Width="793" 
+        Cursor="Arrow"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{x:Null}" Opacity="1" Loaded="Window_Loaded" Icon="icon.ico">
+
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo Description="An app with a taskbar info description" 
+                         ProgressValue="{Binding Count}" ProgressState="Normal"/>
+    </Window.TaskbarItemInfo>
+
+    <Grid Loaded="Grid_Loaded" Margin="0" Height="583">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/background.png"/>
+        </Grid.Background>
+
+        <Button x:Name="Button" Margin="759,203,0,0" VerticalAlignment="Top" Height="15" BorderThickness="0" HorizontalAlignment="Left" Width="16" IsHitTestVisible="True" Cursor="Hand" PreviewMouseLeftButtonUp="button_PreviewMouseLeftButtonUp">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Close2" Source="Resources/close_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Close1" Source="Resources/close.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Close2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Close1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="StartGameBtn" Cursor="Hand" HorizontalAlignment="Left"  Margin="614,514,0,0" VerticalAlignment="Top" Width="159" Height="51" Background="{x:Null}" Click="StartGameBtn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Close2" Source="Resources/gamestart.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Close1" Source="Resources/gamestart_hover.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Close2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Close1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="OptionBtn" Cursor="Hand" HorizontalAlignment="Left" Margin="523,543,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" Height="23" Click="OptionBtn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Close2" Source="Resources/settings_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Close1" Source="Resources/settings.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Close2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Close1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <CheckBox x:Name="WinMode" Cursor="Hand" HorizontalAlignment="Left" Margin="523,522,0,0" VerticalAlignment="Top" Background="{x:Null}" Style="{StaticResource myCheckBoxStyle}" Height="16" Width="15" Click="WinMode_Click"/>
+            <Button x:Name="MinimazeBtn" Margin="738,203,0,0" VerticalAlignment="Top" Height="15" BorderThickness="0" HorizontalAlignment="Left" Width="16" IsHitTestVisible="True" Cursor="Hand" Click="Minimaze_btn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel>
+                        <Image x:Name="Close2" Source="Resources/minimaze_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image x:Name="Close1" Source="Resources/minimaze.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Close2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Close1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Image x:Name="Progressbar1" HorizontalAlignment="Left" Height="10" Margin="111,538,0,0" VerticalAlignment="Top" Source="Resources/progressbar_1.bmp" Stretch="Fill" Width="356" MinHeight="10" MaxHeight="10" MaxWidth="356">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/progressbar_1.bmp"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="Progressbar2" HorizontalAlignment="Left" Height="10" Margin="111,549,0,0" VerticalAlignment="Top" Source="Resources/progressbar_2.bmp" Stretch="Fill" Width="356" MinHeight="10" MaxHeight="10" MaxWidth="356">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/progressbar_2.bmp"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="CoverImage" HorizontalAlignment="Left" Height="252" Margin="57,259,0,0" VerticalAlignment="Top" Width="456" >
+
+        </Image>
+        <Image x:Name="Image1" HorizontalAlignment="Left" Height="252" Margin="521,259,0,0" VerticalAlignment="Top" Width="251" Source="Resources/News.png"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="276,516,0,0" VerticalAlignment="Top" Foreground="White" Width="228"/>
+        <Label x:Name="StateLabel" Content="Label" HorizontalAlignment="Left" Margin="57,516,0,0" VerticalAlignment="Top" Foreground="White" Width="214"/>
+        <Label x:Name="Rss1Lb" Content="News temporarily unavailable." HorizontalAlignment="Left" Margin="536,300,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10.667" Cursor="Hand" Width="218" PreviewMouseLeftButtonDown="RSS1_Clicked"/>
+        <Label x:Name="Rss2Lb" Content="" HorizontalAlignment="Left" Margin="536,336,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10.667" Cursor="Hand" Width="218" PreviewMouseLeftButtonDown="RSS2_Clicked"/>
+        <Label x:Name="Rss3Lb" Content="" HorizontalAlignment="Left" Margin="536,373,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10.667" Cursor="Hand" Width="218" PreviewMouseLeftButtonDown="RSS3_Clicked"/>
+        <Label x:Name="RssDate1Lb" Content="" HorizontalAlignment="Left" Margin="536,288,0,0" VerticalAlignment="Top" Foreground="#FFACACAC" FontSize="9.333" Width="218" Cursor="Hand" PreviewMouseLeftButtonDown="RSS1_Clicked"/>
+        <Label x:Name="RssDate2Lb" Content="" HorizontalAlignment="Left" Margin="536,324,0,0" VerticalAlignment="Top" Foreground="#FFACACAC" FontSize="9.333" Width="218" Cursor="Hand" PreviewMouseLeftButtonDown="RSS2_Clicked"/>
+        <Label x:Name="RssDate3Lb" Content="" HorizontalAlignment="Left" Margin="536,360,0,0" VerticalAlignment="Top" Foreground="#FFACACAC" FontSize="9.333" Width="218" Cursor="Hand" PreviewMouseLeftButtonDown="RSS3_Clicked"/>
+        <Label x:Name="LabelCs" Content="Connect Server:" HorizontalAlignment="Left" Margin="536,426,0,0" VerticalAlignment="Top" Foreground="#FF99FF83"/>
+        <Label x:Name="LabelGs" Content="Game Server:" HorizontalAlignment="Left" Margin="536,452,0,0" VerticalAlignment="Top" Foreground="#FF99FF83"/>
+        <Label x:Name="LabelTime" Content="Server Time:" HorizontalAlignment="Left" Margin="536,478,0,0" VerticalAlignment="Top" Foreground="#FF99FF83"/>
+        <Label x:Name="LabelCsState" Content="ONLINE" HorizontalAlignment="Left" Margin="661,426,0,0" VerticalAlignment="Top" Foreground="Lime"/>
+        <Label x:Name="LabelGsState" Content="ONLINE" HorizontalAlignment="Left" Margin="661,452,0,0" VerticalAlignment="Top" Foreground="Lime"/>
+        <Label x:Name="LabelTimeValue" Content="10:00" HorizontalAlignment="Left" Margin="661,478,0,0" VerticalAlignment="Top" Foreground="Lime"/>
+        <Label x:Name="LabelTotalDw" Content="100%" HorizontalAlignment="Left" Margin="467,529,0,0" VerticalAlignment="Top" FontSize="10.667" Foreground="#FF6565D6"/>
+        <Label x:Name="LabelUpdDw" Content="100%" HorizontalAlignment="Left" Margin="467,540,0,0" VerticalAlignment="Top" FontSize="10.667" Foreground="#FFB9FF00"/>
+        <Label x:Name="Label" Content="WinMode" HorizontalAlignment="Left" Margin="543,516,0,0" VerticalAlignment="Top" Height="27" Width="63" Foreground="#FF7C7C7C"/>
+    </Grid>
+</Window>

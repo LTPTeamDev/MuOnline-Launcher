@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language>
+	<Text Index="0"  Value="Файл настроек не найден! \nПереустановите клиент." />
+	<Text Index="1"  Value="Лаунчер уже используется." />
+	<Text Index="2"  Value="Файл изображения не найден" />
+	<Text Index="3"  Value="Лаунчер свернут!" />
+	<Text Index="4"  Value="Проверка обновлений..." />
+	<Text Index="5"  Value="Оффлайн" />
+	<Text Index="6"  Value="Онлайн" />
+	<Text Index="7"  Value="Произошла ошибка при обновлении..." />
+	<Text Index="8"  Value="Ошибка загрузки: [{0}]" />
+	<Text Index="9"  Value="Подготовка к обновлению..." />
+	<Text Index="10" Value="Проверка: [{0}]..." />
+	<Text Index="11" Value="Загрузка: [{0}]" />
+	<Text Index="12" Value="Обновление клиента..." />
+	<Text Index="13" Value="Проверка завершена!" />
+	<Text Index="14" Value="Клиент полностью обновлен." />
+	<Text Index="15" Value="Лаунчер запущен, хорошей игры!" />
+</Language>

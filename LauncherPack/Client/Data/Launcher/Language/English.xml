@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language>
+	<Text Index="0"  Value="Config file not found! \nPlease reinstall client!" />
+	<Text Index="1"  Value="Launcher already in use." />
+	<Text Index="2"  Value="Image file don't exist" />
+	<Text Index="3"  Value="MU Launcher minimized!" />
+	<Text Index="4"  Value="Checking for updates..." />
+	<Text Index="5"  Value="OFFLINE" />
+	<Text Index="6"  Value="ONLINE" />
+	<Text Index="7"  Value="An error occurred while updating..." />
+	<Text Index="8"  Value="Failed to download! [{0}]" />
+	<Text Index="9"  Value="Preparation for renewal..." />
+	<Text Index="10" Value="Checking [{0}]..." />
+	<Text Index="11" Value="Loading: [{0}]" />
+	<Text Index="12" Value="Client updating in progress." />
+	<Text Index="13" Value="Check is over, you can start the game!" />
+	<Text Index="14" Value="Client is fully updated." />
+	<Text Index="15" Value="Launcher started, have a good game." />
+</Language>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="Launcher.Options"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Cursor="Arrow"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        Title="Window1" Height="451" Width="385" Icon="Resources/favicon.ico">
+    <Grid Width="385" Height="451" Loaded="Grid_Loaded">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/settings_bg.bmp"/>
+        </Grid.Background>
+        <Button x:Name="Close" Cursor="Hand" HorizontalAlignment="Left" Margin="354,10,-44,0" VerticalAlignment="Top" Width="16" Height="15" Background="{x:Null}" BorderThickness="0" PreviewMouseLeftButtonUp="Close_PreviewMouseLeftButtonUp">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Close2" Source="Resources/close_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Close1" Source="Resources/close.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Close2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Close1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <CheckBox x:Name="Music" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="0" Width="16" Height="15" Style="{StaticResource myCheckBoxStyle}"/>
+        <CheckBox x:Name="WinMode" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="238,131,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="0" Width="16" Height="15" Style="{StaticResource myCheckBoxStyle}"/>
+        <CheckBox x:Name="Effects" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="151,300,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="0" Width="16" Height="15" Style="{StaticResource myCheckBoxStyle}"/>
+        <RadioButton x:Name="Color16" Cursor="Hand" HorizontalAlignment="Left" Margin="151,226,0,0" VerticalAlignment="Top" Height="15" Width="16" BorderThickness="0"/>
+        <RadioButton x:Name="Color32" Cursor="Hand" HorizontalAlignment="Left" Margin="300,226,0,0" VerticalAlignment="Top" Height="15" Width="16" BorderThickness="0"/>
+
+        <Button x:Name="Save" Cursor="Hand" HorizontalAlignment="Left" Margin="112,401,0,0" VerticalAlignment="Top" Width="74" Height="22" Background="{x:Null}" BorderThickness="0" Click="Save_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Save2" Source="Resources/save_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Save1" Source="Resources/save.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Save2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Save1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="Cancel" Cursor="Hand" HorizontalAlignment="Left" Margin="196,401,0,0" VerticalAlignment="Top" Width="74" Height="22" Background="{x:Null}" BorderThickness="0" Click="Cancel_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel>
+                        <Image Name="Cancel2" Source="Resources/cansel_hover.bmp" Stretch="Fill" Visibility="Collapsed" />
+                        <Image Name="Cancel1" Source="Resources/cansel.bmp" Stretch="Fill" Visibility="Visible" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Cancel2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Cancel1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ComboBox x:Name="Resolution" HorizontalAlignment="Left" Margin="32,127,0,0" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="AccountBox" HorizontalAlignment="Left" Height="23" Margin="201,362,0,0" TextWrapping="Wrap" Text="account" VerticalAlignment="Top" Width="167" Background="White"/>
+        <ComboBox x:Name="Language" HorizontalAlignment="Left" Margin="17,362,0,0" VerticalAlignment="Top" Width="167" Height="23"/>
+
+    </Grid>
+</Window>

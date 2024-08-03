@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResolutionsInfo>
+	<Resolution Index="0"  Name="640x480" />
+	<Resolution Index="1"  Name="800x600" />
+	<Resolution Index="2"  Name="1024x768" />
+	<Resolution Index="3"  Name="1152x864" />
+	<Resolution Index="4"  Name="1280x768" />
+	<Resolution Index="5"  Name="1280x800" />
+	<Resolution Index="6"  Name="1280x960" />
+	<Resolution Index="7"  Name="1280x1024" />
+	<Resolution Index="8"  Name="1366x768" />
+	<Resolution Index="9"  Name="1440x900" />
+	<Resolution Index="10" Name="1600x900" />
+	<Resolution Index="11" Name="1600x1200" />
+	<Resolution Index="12" Name="1680x1050" />
+	<Resolution Index="13" Name="1920x1080" />
+	<Resolution Index="14" Name="1920x1200" />
+	<Resolution Index="15" Name="1024x600" />
+	<Resolution Index="16" Name="1910x970" />
+	<Resolution Index="17" Name="1350x650" />
+	<Resolution Index="18" Name="1600x1280" />
+	<Resolution Index="19" Name="1248x702" />
+</ResolutionsInfo>
